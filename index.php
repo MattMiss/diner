@@ -20,5 +20,26 @@ $f3->route('GET /', function() {
     echo $view->render('views/home-page.html');
 });
 
+// Define a Breakfast Menu route
+$f3->route('GET /menus/breakfast', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/breakfast-menu.html');
+});
+
+// Define a Lunch Menu route
+$f3->route('GET /menus/lunch', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/lunch-menu.html');
+});
+
+// Define a Dinner Menu route
+$f3->route('GET /menus/dinner', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/dinner-menu.html');
+});
+
 // Run fat free
 $f3->run();
